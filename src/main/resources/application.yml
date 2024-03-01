@@ -1,0 +1,50 @@
+server:
+  port: 8053
+
+spring:
+  application:
+    useOTP: false
+    otpProd: false
+    otpTestMail: tkilunda@emtechhouse.co.ke
+    name: E&MT VCB BANKING SOLUTION
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: false
+    show-sql: false
+
+    properties:
+      hibernate:
+        format_sql: true
+
+  datasource:
+
+    #
+    url:  jdbc:mariadb://localhost/marketrates
+    username: root
+    password:
+
+
+    driverClassName: org.mariadb.jdbc.Driver
+
+
+
+users:
+  app:
+    jwtSecret: /buCOEjS/+H7ZwekxyLKLdDeegHUGEytjxuivosdrzjRG4g4E+kA3uXO5lvGBVsl2NwqsgiGUUI5bjgY/6WG/VSIIG+22b1Rvdb59BY0YRod6Dnjnp0REsPn//hshs6ucnOVCBRp0lbVb1kP+EDOM7W7N72/+t+R1d8JQ4pjisoJZI4e0MV3PlZtzXKI0SY2EQUtI
+    jwtExpirationMs: 43200000
+
+    client:
+      origin: http://localhost:4200/
+
+
+
+
+
+
+
